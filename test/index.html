@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="timer" id="timer">Time left: 30:00</div>
+        <div class="question-box" id="question-box">
+            <!-- Question boxes will be generated here -->
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Test</h1>
+        <div class="question" id="question">Question will be here</div>
+        <div class="answers" id="answers">
+            <!-- Answer options will be generated here -->
+        </div>
+        <div class="buttons">
+            <button id="prev" onclick="prevQuestion()">Previous</button>
+            <button id="next" onclick="nextQuestion()">Next</button>
+            <button id="submit" onclick="submitQuiz()" style="display: none;">Submit</button>
+        </div>
+    </div>
+
+    <!-- Modal for displaying the score -->
+    <div id="modal">
+        <h1>Congratulations!</h1>
+        <h2>You have successfully attempted the exam.</h2>
+        <table>
+            <tr>
+                <th>Total Questions</th>
+                <th>Attempted</th>
+                <th>Skipped</th>
+                <th>Correct Answers</th>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td id="attempted"></td>
+                <td id="skipped"></td>
+                <td id="correct"></td>
+            </tr>
+        </table>
+        <h2 id="final-score"></h2>
+        <button class="ok-button" onclick="closeModal()">OK</button>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
